@@ -55,53 +55,8 @@ enum WeekDays {
 console.log(WeekDays.Friday);
 console.log(WorkDays.Monday);
 
-// Objects
-const testSubject: {
-  id: number;
-  name: string;
-} = {
-  id: 2,
-  name: "Cornwall",
-};
-
-// ALTERNATE to above:
-type SubjectProp = {
-  id: number;
-  name: string;
-};
-
-// Objects
-const Subject: SubjectProp = {
-  id: 2,
-  name: "Cornwall",
-};
-
 // Type Assertion - Tells compiler to treat an entity as a different type.
 // 2 Ways tp assert type.
 let cid: any = 1;
 let assertID1 = <number>cid;
 let assertID2 = cid as number;
-
-// Override vs overload?
-
-// Functions
-// return type number
-const addNum = (x: number, y: number): number => {
-  let total = x + y;
-  printNum(total);
-  return total;
-};
-
-// return type void
-const printNum = (total: number): void => {
-  console.log(total);
-};
-
-let added = addNum(5, 10);
-
-// Interface
-interface Banks {
-  (names): void;
-}
-
-const brag: Banks = ()
