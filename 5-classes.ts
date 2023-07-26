@@ -21,6 +21,7 @@ class Person implements PersonInterface {
   }
 }
 
+// Subclass
 class Employee extends Person {
   role: string;
   constructor(id: number, name: string, role: string) {
